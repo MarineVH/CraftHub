@@ -13,9 +13,7 @@ export default {
       colors: {
         yellow: "#fff9d6",
         blue: "#1f73ae",
-        darkblue: "#0e4890",
         orange: "#fda608",
-        zinc: "#09090b",
       },
     },
     screens: {

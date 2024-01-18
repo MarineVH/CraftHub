@@ -13,7 +13,7 @@ const LaptopNavbar = () => {
         <nav className='navbarContainer fixed top-0 left-0 right-0 flex w-full p-1 bg-yellow border border-b-blue border-opacity-50 items-center'>
             <Link to="/home" className='navbarLeft flex-1 w-1/3" '><TitleH1 title="CraftHub" /></Link>
             <Link to="/search" className='navbarCenter border border-blue border-opacity-50 rounded-lg flex flex-1 justify-center items-center w-5/12 h-8 bg-yellow'><LuSearch className="text-blue mx-2" /><input className="bg-yellow placeholder-blue placeholder-opacity-80 px-2 w-full border-none" type="text" placeholder="Search..." /></Link>
-            <Link to="/profile" className='navbarRight flex-1 w-2/5 flex justify-end items-center pr-2'><Avatar size="small" /></Link>
+            <Link to="/profile" className='navbarRight flex-1 w-2/5 flex justify-end items-center pr-2'><Avatar className="h-12 w-12" /></Link>
         </nav>
     );
 };
