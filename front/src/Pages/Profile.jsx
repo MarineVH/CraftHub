@@ -5,10 +5,10 @@ import Posts from '../Components/Posts/Posts';
 
 const Profile = () => {
     return (
-        <div className='home w-full h-screen bg-yellow'>
+        <div className='home w-full h-full bg-yellow'>
             <Navbar />
-            <ProfileCard image="../public/micro.jpg" />
-            <Posts image="../public/micro.jpg" title="" text="lorem epsum"/>
+            <ProfileCard />
+            <Posts />
         </div>
     );
 };
