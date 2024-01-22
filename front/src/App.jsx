@@ -15,9 +15,9 @@ function App() {
         <Route index element={<Register />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signin" element={<SignInForm />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="home" element={<Home />} />
+        <Route path="search" element={<Search />} />
+        <Route path="profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );
