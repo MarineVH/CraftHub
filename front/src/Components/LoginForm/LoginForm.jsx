@@ -35,7 +35,9 @@ const LoginForm = () => {
             className="my-5 py-1 w-full text-yellow bg-orange rounded-lg"
             type="submit"
           >
-            Login
+            <Link to="/home">
+              Login
+            </Link>
           </button>
           <div className="register-link">
             <p>
