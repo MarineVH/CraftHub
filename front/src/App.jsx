@@ -19,7 +19,6 @@ import TitleH2 from "./Components/Title/TitleH2";
 function App() {
   return (
     <BrowserRouter>
-    <Router>
       <Routes>
         <Route index element={<Register />} />
         <Route path="/login" element={<LoginForm />} />
@@ -36,7 +35,6 @@ function App() {
         <Route path="/salutation" element={<Salutation />} />
         <Route path="/titileh2" element={<TitleH2 />} />
       </Routes>
-    </Router>
     </BrowserRouter>
   );
 }
