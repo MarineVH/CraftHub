@@ -16,7 +16,7 @@ const LoginForm = () => {
           <div className="input-box mt-10 mb-5 flex justify-center">
             <FaEnvelope className="icon mr-3 pt-1" />
             <input
-              className="bg-blue placeholder-yellow placeholder-opacity-80 rounded pl-2"
+              className="bg-blue text-yellow placeholder-yellow placeholder-opacity-80 rounded pl-2"
               type="email"
               placeholder="Email"
               required
@@ -25,7 +25,7 @@ const LoginForm = () => {
           <div className="input-box mb-4 flex justify-center">
             <FaLock className="icon mr-3 pt-1" />
             <input
-              className="bg-blue placeholder-yellow placeholder-opacity-80 rounded pl-2"
+              className="bg-blue text-yellow placeholder-yellow placeholder-opacity-80 rounded pl-2"
               type="password"
               placeholder="********"
               required
