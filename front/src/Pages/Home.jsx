@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
 import TitleH2 from "../Components/Title/TitleH2";
 import Salutation from "../Components/Salutation/Salutation";
@@ -11,6 +12,7 @@ const Home = () => {
       <TitleH2 title="Trending Now" />
       <Navbar />
       <Posts image="../public/micro.jpg" title="" text="lorem epsum"/>
+      <Outlet />
     </div>
   );
 };
