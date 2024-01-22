@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Routes, Route } from "react-router-dom";
 import "./index.css";
 import Register from "./Pages/Register";
 import Home from "./Pages/Home";
@@ -11,7 +11,6 @@ import SignInForm from "./Components/SignInForm/SignInForm";
 function App() {
   return (
     <BrowserRouter>
-    <Router>
       <Routes>
         <Route index element={<Register />} />
         <Route path="/login" element={<LoginForm />} />
@@ -20,7 +19,6 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-    </Router>
     </BrowserRouter>
   );
 }
