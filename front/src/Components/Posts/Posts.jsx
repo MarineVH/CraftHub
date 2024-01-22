@@ -1,11 +1,34 @@
 import React from "react";
+import Post from "../Post/Post";
+import Avatar from "../Profile/Avatar";
 
-const Posts = (props) => {
+const Posts = () => {
+  const posts = [
+    {
+      id: 1,
+      username: "Username",
+      userId: 1,
+      profilePic: <Avatar className="h-10 w-10"/>,
+      desc: "Lorem ipsum",
+      img: "micro.jpg",
+    },
+    {
+      id: 2,
+      username: "Username",
+      userId: 2,
+      profilePic: <Avatar className="h-12 w-12"/>,
+      desc: "Tenetur iste",
+      img: "micro.jpg",
+    },
+  ];
+
   return (
-    <figure className="h-1/4 w-1/3 bg-yellow border text-blue border-blue border-opacity-50 rounded mt-20 mx-auto flex flex-col items-center">
-      <p className="text-center p-4">{props.text}</p>
-      <img className="object-cover w-full h-3/4 rounded-t" src={props.image} alt={props.title} />
-    </figure>
+    <div className="posts flex flex-col">
+      {posts.map(post=>(
+        <Post post={post} key={post.id}/>
+      ))}
+      {posts.length === 0 && <p>No posts available</p>}
+    </div>
   );
 };
 
