@@ -98,4 +98,5 @@ Note: When finish, to deactivate the environment type:
 
 ## Database ER diagram
 
+Diagram by Graphivz
 ![Alt text](erd.png)
