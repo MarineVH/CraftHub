@@ -13,6 +13,8 @@ class NewPost(models.Model):
     def __str__(self):
         return self.title
 
+<<<<<<< HEAD
+=======
     def full_image_url(self):
         return self.image.url if self.image else None
 
@@ -25,3 +27,4 @@ class Account(models.Model):
 
     def __str__(self):
         return self.user.username
+>>>>>>> main

@@ -12,8 +12,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
-from decouple import config
-
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+GRAPHVIZ_PATH = r'C:\Program Files\Graphviz\bin'  # Adjust this path based on your Graphviz installation
+os.environ["PATH"] += os.pathsep + GRAPHVIZ_PATH
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,9 +46,16 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "rest_framework_simplejwt",
+<<<<<<< HEAD
+    'django_extensions',
+=======
     "rest_framework_simplejwt.token_blacklist",
+>>>>>>> main
 ]
-
+GRAPH_MODELS ={
+    'all_applications': True,
+    'graph_models': True,
+     }
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = ("http://localhost:8000", "http://localhost:5173")
 

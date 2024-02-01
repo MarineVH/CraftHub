@@ -12,6 +12,22 @@
 #### Install the python environment
 
 - clone the repository.
+<<<<<<< HEAD
+<<<<<<< HEAD
+- in CMD
+- `cd back`
+  (CraftHub\back)
+  - `python -m venv venv`
+    to create virtual environment
+=======
+- `cd back`
+  (CraftHub\back)
+- `python -m venv venv`
+  to create virtual environment
+>>>>>>> main
+- `venv\Scripts\activate`
+  to activate virtual environment
+=======
 - in CMD
 - `cd back`
   ![Alt text](image-2.png)
@@ -25,6 +41,7 @@
 #### Setup Project inside the virtual environment
 
 - Once inside the environment: ![Alt text](image.png)
+>>>>>>> main
 - `pip install django`
 - `python.exe -m pip install --upgrade pip`
   inside the back folder
