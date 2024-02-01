@@ -12,22 +12,17 @@
 #### Install the python environment
 
 - clone the repository.
-<<<<<<< HEAD
-<<<<<<< HEAD
 - in CMD
 - `cd back`
   (CraftHub\back)
   - `python -m venv venv`
     to create virtual environment
-=======
 - `cd back`
   (CraftHub\back)
 - `python -m venv venv`
   to create virtual environment
->>>>>>> main
 - `venv\Scripts\activate`
   to activate virtual environment
-=======
 - in CMD
 - `cd back`
   ![Alt text](image-2.png)
@@ -41,7 +36,6 @@
 #### Setup Project inside the virtual environment
 
 - Once inside the environment: ![Alt text](image.png)
->>>>>>> main
 - `pip install django`
 - `python.exe -m pip install --upgrade pip`
   inside the back folder
@@ -71,11 +65,11 @@ Note: When finish, to deactivate the environment type:
   GET request, to get all post in the database.
 - create-new-post/
   POST request, to create a new post.
-- delete-post/
+- delete-post/  
   DELETE request, to delete a post by "post_id".
-- update-post/
+- update-post/  
   PUT request, to update a post by "post_id".
-- get-post/
+- get-post/  
   GET request, to search a post by "post_id".
 
 ### users
@@ -101,3 +95,7 @@ Note: When finish, to deactivate the environment type:
 
 - logout/
   POST request, to logout. payload {"refresh_token"}
+
+## Database ER diagram:
+
+![Alt text](erd.png)
