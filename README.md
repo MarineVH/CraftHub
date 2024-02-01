@@ -6,11 +6,18 @@
 
 - download and install python 3.12.1
 - clone the repository.
+<<<<<<< HEAD
 - in CMD
 - `cd back`
   (CraftHub\back)
   - `python -m venv venv`
     to create virtual environment
+=======
+- `cd back`
+  (CraftHub\back)
+- `python -m venv venv`
+  to create virtual environment
+>>>>>>> main
 - `venv\Scripts\activate`
   to activate virtual environment
 - `pip install django`
