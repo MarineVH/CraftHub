@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-5stn#xakn*tho^qik#0qb#00p5boxkn$+njxfb#+-i-@1qw15)"
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config("DEBUG", cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -46,7 +46,11 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "rest_framework_simplejwt",
+<<<<<<< HEAD
     'django_extensions',
+=======
+    "rest_framework_simplejwt.token_blacklist",
+>>>>>>> main
 ]
 GRAPH_MODELS ={
     'all_applications': True,
@@ -56,16 +60,16 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = ("http://localhost:8000", "http://localhost:5173")
 
 REST_FRAMEWORK = {
-     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-      ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ],
 }
 
 SIMPLE_JWT = {
-     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
-     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
-     'ROTATE_REFRESH_TOKENS': True,
-     'BLACKLIST_AFTER_ROTATION': True
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=10),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+    "ROTATE_REFRESH_TOKENS": True,
+    "BLACKLIST_AFTER_ROTATION": True,
 }
 
 MIDDLEWARE = [
@@ -106,12 +110,13 @@ WSGI_APPLICATION = "CraftHub.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "djongo",
-        "NAME": "CraftHub",
-        "ENFORCE_SCHEMA": False,
-        "CLIENT": {
-            "host": "mongodb+srv://Han:gSCdhFNG6c5jdYjd@cluster0.gfzl58s.mongodb.net"
-        },
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": config("DATABASE_NAME"),
+        "USER": config("DATABASE_USER"),
+        "PASSWORD": config("DATABASE_PASSWORD"),
+        "HOST": config("DATABASE_HOST"),
+        "PORT": config("DATABASE_PORT", default="5432"),
+        "OPTIONS": {"sslmode": "require"},
     }
 }
 
@@ -156,3 +161,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+DJONGO_DEBUG = True
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
