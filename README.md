@@ -96,6 +96,6 @@ Note: When finish, to deactivate the environment type:
 - logout/
   POST request, to logout. payload {"refresh_token"}
 
-## Database ER diagram:
+## Database ER diagram
 
 ![Alt text](erd.png)
