@@ -9,12 +9,7 @@ class NewPost(models.Model):
     postContent = models.CharField(max_length=1000, blank=False, default="")
     image = models.ImageField(upload_to="post_images")
     created_at = models.DateTimeField(default=timezone.now)
-
-    def __str__(self):
-        return self.title
-
-<<<<<<< HEAD
-=======
+    
     def full_image_url(self):
         return self.image.url if self.image else None
 
@@ -27,4 +22,3 @@ class Account(models.Model):
 
     def __str__(self):
         return self.user.username
->>>>>>> main

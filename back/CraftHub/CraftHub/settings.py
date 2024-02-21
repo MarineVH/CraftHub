@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
+from decouple import config
+
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GRAPHVIZ_PATH = r'C:\Program Files\Graphviz\bin'  # Adjust this path based on your Graphviz installation
@@ -46,11 +48,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "rest_framework_simplejwt",
-<<<<<<< HEAD
-    'django_extensions',
-=======
     "rest_framework_simplejwt.token_blacklist",
->>>>>>> main
 ]
 GRAPH_MODELS ={
     'all_applications': True,
